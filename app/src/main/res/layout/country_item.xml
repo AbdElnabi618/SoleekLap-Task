@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_shape"
+    android:layout_margin="8dp"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/flag_image"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/country_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="Egypt"
+        android:textStyle="italic"
+        android:layout_toEndOf="@id/flag_image"
+        android:layout_alignTop="@id/flag_image"
+        />
+    <TextView
+        android:id="@+id/capital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:text="capital :"
+        android:layout_below="@id/country_name"
+        android:layout_toEndOf="@id/flag_image"
+        />
+
+
+
+</RelativeLayout>

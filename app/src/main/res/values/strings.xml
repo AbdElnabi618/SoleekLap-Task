@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">SoleekLab Task</string>
+    <string name="comName">Soleek Lab</string>
+
+    <!--splash text-->
+    <string name="welcome">Welcome</string>
+    <!--login text-->
+    <string name="enjoy">login and enjoy ❤</string>
+    <string name="welcomeLogin">Welcome to Soleek Lab</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="loginText">Login</string>
+    <string name="noAccount">Don\'t have an account?</string>
+    <string name="createAccount">Create one!</string>
+    <string name="forget">Forget Password?</string>
+
+    <!--Registration-->
+    <string name="RegistrationSoleek">Registration in Soleek</string>
+    <string name="haveFun">SignUp and have fun 😊</string>
+
+    <string name="signup">Sign up</string>
+    <string name="haveAccount">I\'m already have an account,</string>
+    <string name="signup_with">Also you can Sign up with :</string>
+
+    <string name="confirm_password">Confirm Password</string>
+
+
+    <string name="LoginState">UserLoginState</string>
+    <string name="isLogin">userIsLogin</string>
+
+    <string name="facebook_app_id">467027097439166</string>
+    <string name="fb_login_protocol_scheme">fb467027097439166</string>
+
+</resources>

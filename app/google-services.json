@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "507399985750",
+    "firebase_url": "https://soleeklap-c39fd.firebaseio.com",
+    "project_id": "soleeklap-c39fd",
+    "storage_bucket": "soleeklap-c39fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507399985750:android:c66a67dc3dbed777",
+        "android_client_info": {
+          "package_name": "com.kh618.soleektask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "507399985750-cli0qv8v2stsj7gp3mrhv9ov4mbnjei7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kh618.soleektask",
+            "certificate_hash": "f27523921dba047c6fc658ff79036c6076626ffd"
+          }
+        },
+        {
+          "client_id": "507399985750-ipuu4q5n33alkekmv8c6kfm178etvaf1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIsdvEQQiA7wRN7orx9zL-FmViDL3tTDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "507399985750-ipuu4q5n33alkekmv8c6kfm178etvaf1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

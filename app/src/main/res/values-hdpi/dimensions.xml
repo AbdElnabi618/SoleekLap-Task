@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logoW">60dp</dimen>
+    <dimen name="logoH">60dp</dimen>
+
+    <!--login-->
+    <dimen name="marginTop">16dp</dimen>
+    <dimen name="welcomeZ">14sp</dimen>
+    <dimen name="enjoyZ">12sp</dimen>
+    <dimen name="userIconW">20dp</dimen>
+    <dimen name="userIconH">20dp</dimen>
+    <dimen name="lockIconW">20dp</dimen>
+    <dimen name="lockIconH">20dp</dimen>
+    <dimen name="forgetZ">12sp</dimen>
+    <dimen name="login_btnW">140dp</dimen>
+    <dimen name="btnZ">14sp</dimen>
+    <dimen name="login_btnH">30dp</dimen>
+    <dimen name="singUpZ">12sp</dimen>
+    <!--registration-->
+    <dimen name="registration_ImgW">140dp</dimen>
+    <dimen name="registration_ImgH">130dp</dimen>
+    <dimen name="reg_icon">35dp</dimen>
+</resources>
