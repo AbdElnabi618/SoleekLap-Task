@@ -14,7 +14,7 @@ public class HomeModel {
 
     interface LoadItems{
 
-        void onSucceed(ArrayList<CountryItem> items);
+        void onSucceed(ArrayList<CountryItem> items, char c);
         void onFailed(String msg);
         void showProgress();
         void hideProgress();
@@ -22,7 +22,7 @@ public class HomeModel {
     }
 
 
-    public void getDate(final LoadItems loadItems){
+    public void getDate(final char c, final LoadItems loadItems){
         loadItems.showProgress();
 
         Retrofit retrofit = ApiClient.getClient();
@@ -34,7 +34,7 @@ public class HomeModel {
             @Override
             public void onResponse(Call<ArrayList<CountryItem>> call, Response<ArrayList<CountryItem>> response) {
                 if(response.body() != null)
-                    loadItems.onSucceed(response.body());
+                    loadItems.onSucceed(response.body(), c);
                 loadItems.hideProgress();
             }
 

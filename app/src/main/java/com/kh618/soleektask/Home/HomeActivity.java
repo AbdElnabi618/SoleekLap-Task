@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
 
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
@@ -30,15 +31,18 @@ public class HomeActivity extends Activity implements HomeView{
     private CountryAdabter countryAdabter;
     private ProgressDialog loadingDialog;
     private AlertDialog errorDialog;
+    private Button logOutButtton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activty);
-
+        char item = getIntent().getCharExtra("char", '\0');
         recyclerView = findViewById(R.id.country_recycle);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         recyclerView.setHasFixedSize(false);
+        logOutButtton = findViewById(R.id.logout);
+        logOutButtton.setVisibility(View.INVISIBLE);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -47,37 +51,21 @@ public class HomeActivity extends Activity implements HomeView{
         loadingDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 
         HomePresenter presenter = new HomePresenter(this, new HomeModel());
-        presenter.startLoading();
+        presenter.startLoading(item);
     }
 
-    /**
-     * logout from firebase and facebook
-     * @param view
-     */
-    public void LogOut(View view){
-        firebaseAuth.signOut();
-        LoginManager.getInstance().logOut();
-        saveState();
-        startActivity(new Intent(this, LoginActivity.class));
-        finish();
-    }
 
-    /**
-     * save log out status
-     */
-    private void saveState(){
-        SharedPreferences sharedPreferences = this.getSharedPreferences(
-                this.getString(R.string.LoginState), Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean(this.getString(R.string.isLogin),false);
-        editor.apply();
-    }
+
 
     @Override
     public void loadList(ArrayList<CountryItem> items) {
-        this.items = items;
-        countryAdabter = new CountryAdabter(this,this.items);
-        recyclerView.setAdapter(countryAdabter);
+        if(items.size() != 0) {
+            this.items = items;
+            countryAdabter = new CountryAdabter(this, this.items);
+            recyclerView.setAdapter(countryAdabter);
+        }else{
+            onFialed("no country with this character");
+        }
     }
 
     @Override
@@ -100,6 +88,7 @@ public class HomeActivity extends Activity implements HomeView{
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
+                finish();
             }
         });
         errorDialog = builder.create();

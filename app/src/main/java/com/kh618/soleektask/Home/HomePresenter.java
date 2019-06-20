@@ -14,13 +14,20 @@ public class HomePresenter implements HomeModel.LoadItems {
         this.model = model;
     }
 
-    public void startLoading(){
-        model.getDate(this);
+    public void startLoading(char c){
+        model.getDate(c, this);
     }
 
     @Override
-    public void onSucceed(ArrayList<CountryItem> items) {
-        activity.loadList(items);
+    public void onSucceed(ArrayList<CountryItem> items, char c) {
+        ArrayList<CountryItem> chosenItems = new ArrayList<>();
+
+        for (CountryItem item: items) {
+            if(item.getCounterName().contains(String.valueOf(c))){
+                chosenItems.add(item);
+            }
+        }
+        activity.loadList(chosenItems);
     }
 
     @Override

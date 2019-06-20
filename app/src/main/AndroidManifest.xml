@@ -32,6 +32,7 @@
         <activity android:name=".Registration.RegistrationActivity"></activity>
         <activity android:name=".Login.LoginActivity" />
         <activity android:name=".Home.HomeActivity" />
+        <activity android:name=".Countrys.CountrysActivity" />
         <activity android:name=".Splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

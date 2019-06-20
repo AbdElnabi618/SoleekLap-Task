@@ -14,6 +14,7 @@ import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.common.SignInButton;
 import com.google.firebase.auth.FirebaseAuth;
+import com.kh618.soleektask.Countrys.CountrysActivity;
 import com.kh618.soleektask.Home.HomeActivity;
 import com.kh618.soleektask.R;
 
@@ -123,7 +124,7 @@ public class RegistrationActivity extends Activity implements RegistrationView {
 
     @Override
     public void OnRegistrationSucceed() {
-        intent.setClass(this , HomeActivity.class);
+        intent.setClass(this , CountrysActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();

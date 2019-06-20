@@ -9,6 +9,8 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.kh618.soleektask.Countrys.CountrysActivity;
 import com.kh618.soleektask.Home.HomeActivity;
 import com.kh618.soleektask.Login.LoginActivity;
 import com.kh618.soleektask.R;
@@ -51,7 +53,7 @@ public class SplashActivity extends Activity implements SplashView {
 
     @Override
     public void openHomeScreen() {
-        intent.setClass(this, HomeActivity.class);
+        intent.setClass(this, CountrysActivity.class);
         startActivity(intent);
         finish();
     }

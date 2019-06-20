@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.kh618.soleektask.Countrys.CountrysActivity;
 import com.kh618.soleektask.Home.HomeActivity;
 import com.kh618.soleektask.R;
 import com.kh618.soleektask.Registration.RegistrationActivity;
@@ -61,7 +62,7 @@ public class LoginActivity extends Activity implements LoginView {
 
     @Override
     public void StartHomeScreen() {
-        intent.setClass(this, HomeActivity.class);
+        intent.setClass(this, CountrysActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
